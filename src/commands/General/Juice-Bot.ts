@@ -10,11 +10,11 @@ import { MessageType } from '@adiwajshing/baileys'
 export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
-            command: 'cara',
-            description: `Get cara's repo`,
-            aliases: ['cara'],
+            command: 'juice-bot',
+            description: `Get juice-bot's repo`,
+            aliases: ['juice-bot'],
             category: 'general',
-            usage: `${client.config.prefix}cara`,
+            usage: `${client.config.prefix}juice-bot`,
             baseXp: 50
         })
     }
@@ -25,7 +25,7 @@ export default class Command extends BaseCommand {
         MessageType.image,
                     undefined,
                     undefined,
-                    `*Cara*: *https://github.com/iamherok/Cara_public*\n *If you like the bot please star my repo*`,
+                    `*juice-bot*: *https://github.com/phenias/Cara_public*\n *If you like the bot please star my repo*`,
                     undefined
                 ).catch((reason: any) =>
             M.reply(`✖ An error occurred. Please try again later.`))

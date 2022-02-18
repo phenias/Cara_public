@@ -18,6 +18,7 @@ export default class Command extends BaseCommand {
     run = async (M: ISimplifiedMessage, parsedArgs: IParsedArgs): Promise<void> => {
         if (!parsedArgs.joined) {
             const commands = this.handler.commands.keys()
+            const chitoge ="https://telegra.ph/file/4ace451dda4dceca9a827.jpg"
             const categories: { [key: string]: ICommand[] } = {}
             for (const command of commands) {
                 const info = this.handler.commands.get(command)

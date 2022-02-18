@@ -15,11 +15,12 @@ export default class Command extends BaseCommand {
         })
     }
 
-    run = async (M: ISimplifiedMessage, parsedArgs: IParsedArgs): Promise<void> => {
-        if (!parsedArgs.joined) {
-            const commands = this.handler.commands.keys()
-            const chitoge ="https://telegra.ph/file/4ace451dda4dceca9a827.jpg";
-            const categories: { [key: string]: ICommand[] } = {}
+    run = async (M: ISimplifiedMessage,parsedArgs: IParsedArgs): Promise<void> => {
+		const user = M.sender.jid;
+		const chitoge ="https://media.tenor.com/videos/439802e1072533f91c5d309bc7561c32/mp4";
+		if (!parsedArgs.joined) {
+			const commands = this.handler.commands.keys();
+			const categories: { [key: string]: ICommand[] } = {};
             for (const command of commands) {
                 const info = this.handler.commands.get(command)
                 if (!command) continue
